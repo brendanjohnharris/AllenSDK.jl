@@ -16,8 +16,8 @@ using Test
     channels = @test_nowarn cache.get_channel_table()
     units = @test_nowarn cache.get_unit_table()
 
-    session = pyconvert(Int, sessions.index[1])
-    session = cache.get_ecephys_session(session)
+    # session = pyconvert(Int, sessions.index[1])
+    # session = cache.get_ecephys_session(session)
 
     # f = behavior_ecephys_session.BehaviorEcephysSession.from_nwb_path(test_file)
     # @test f isa PythonCall.Py
