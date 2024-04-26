@@ -1,12 +1,13 @@
 using AllenSDK
 using PythonCall
 using Test
+using Scratch
 
 @testset "AllenSDK.jl" begin
     # Load the test file
     ecephyscache = @test_nowarn pyimport("allensdk.brain_observatory.ecephys.ecephys_project_cache")
     behaviorcache = @test_nowarn pyimport("allensdk.brain_observatory.behavior.behavior_project_cache")
-    manifestdir = joinpath(dirname(pathof(AllenSDK)), "..", "test", "testdata")
+    manifestdir = joinpath(get_scratch!("allensdk_test_manifest"), "..", "test", "testdata")
     cache = behaviorcache.VisualBehaviorNeuropixelsProjectCache.from_s3_cache(cache_dir=manifestdir)
 
     @test isfile(joinpath(manifestdir, pyconvert(String, cache.latest_manifest_file())))
