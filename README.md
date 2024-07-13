@@ -13,5 +13,3 @@ ecephyscache = pyimport("allensdk.brain_observatory.ecephys.ecephys_project_cach
 cache = ecephyscache.EcephysProjectCache # This can be used to access neuropixels data
 units = cache.get_units() # E.g. get a python dataframe of neuropixels units
 ```
-
-Note that this package tracks a fork of the AllenSDK for compatibility, found at https://github.com/brendanjohnharris/AllenSDK
