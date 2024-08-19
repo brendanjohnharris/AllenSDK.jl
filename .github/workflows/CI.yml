@@ -26,10 +26,6 @@ jobs:
           - windows-latest
         arch:
           - x64
-          - x86
-        exclude:
-          - os: macOS-latest
-            arch: x86
     steps:
       - uses: actions/checkout@v4
       - uses: julia-actions/setup-julia@v2
@@ -43,6 +39,8 @@ jobs:
       - uses: codecov/codecov-action@v4
         with:
           files: lcov.info
+        env: # Required for codecov-action
+          CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
   docs:
     name: Documentation
     runs-on: ubuntu-latest
