@@ -1,7 +1,7 @@
 name = "AllenSDK"
 uuid = "9d22b198-c11d-497b-9ac7-6add78eade21"
 authors = ["brendanjohnharris <brendanjohnharris@gmail.com> and contributors"]
-version = "0.1.0"
+version = "0.2.0"
 
 [deps]
 PythonCall = "6099a3de-0909-46bc-b1f4-468b9a2dfc0d"
