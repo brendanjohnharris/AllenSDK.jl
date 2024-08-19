@@ -1,5 +1,6 @@
 [deps]
 hdmf = ">3.6"
+wheel = ""
 python = ">=3.9,<=3.11"
 
 [pip.deps]
