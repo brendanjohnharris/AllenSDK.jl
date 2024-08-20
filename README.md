@@ -21,4 +21,4 @@ You should have no problems installing this package as usual on Linux and Window
 ENV["JULIA_CONDAPKG_ENV"] = "/path/to/some/environemt/"
 ENV["JULIA_CONDAPKG_OFFLINE"] = true
 ```
-which use the manual python installation and prevent CondaPkg from attempting to update.
+These environment variables tell [CondaPkg.jl](https://github.com/JuliaPy/CondaPkg.jl) to use a manual python installation and avoid updating.
