@@ -13,3 +13,12 @@ ecephyscache = pyimport("allensdk.brain_observatory.ecephys.ecephys_project_cach
 cache = ecephyscache.EcephysProjectCache # This can be used to access neuropixels data
 units = cache.get_units() # E.g. get a python dataframe of neuropixels units
 ```
+
+For more complex usage, please see [AllenNeuropixels.jl](https://www.github.com/brendanjohnharris/AllenNeuropixels.jl), which builds on this package by providing a more Julia-oriented interface to the AllenSDK.
+
+You should have no problems installing this package as usual on Linux and Windows. On MacOS, you may need to install the Python dependencies manually (see `CondaPkg.toml`) in some environment, then set:
+```julia
+ENV["JULIA_CONDAPKG_ENV"] = "/path/to/some/environemt/"
+ENV["JULIA_CONDAPKG_OFFLINE"] = true
+```
+which use the manual python installation and prevent CondaPkg from attempting to update.
