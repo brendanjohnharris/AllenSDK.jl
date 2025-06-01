@@ -34,7 +34,7 @@ jobs:
         #   - os: windows-latest
         #     version: '1'
     env:
-      JULIA_CONDAPKG_BACKEND: mamba
+      JULIA_CONDAPKG_BACKEND: MicroMamba
       JULIA_CONDAPKG_VERBOSITY: 2
     steps:
       - uses: actions/checkout@v4
