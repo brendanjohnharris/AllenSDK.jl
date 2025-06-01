@@ -2,6 +2,7 @@
 hdmf = ">3.6"
 wheel = ""
 pynwb = "<3"
+scipy = "<1.11"
 python = ">=3.9,<=3.11"
 
 [pip.deps]
