@@ -15,6 +15,7 @@
 [deps]
 hdmf = ">3.6"
 python = ">=3.9,<=3.11"
+scipy = "<1.11"
 
 [pip.deps]
 ndx-events = "@https://github.com/rly/ndx-events/archive/refs/tags/0.2.0.zip"
