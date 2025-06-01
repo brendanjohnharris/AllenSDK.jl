@@ -18,7 +18,7 @@ For more complex usage, please see [AllenNeuropixels.jl](https://www.github.com/
 
 You should have no problems installing this package as usual on Linux and Windows. On MacOS, you may need to install the Python dependencies manually (see `CondaPkg.toml`) in some environment, then set:
 ```julia
-ENV["JULIA_CONDAPKG_ENV"] = "/path/to/some/environemt/"
+ENV["JULIA_CONDAPKG_ENV"] = "/path/to/some/environment/"
 ENV["JULIA_CONDAPKG_OFFLINE"] = true
 ```
 These environment variables tell [CondaPkg.jl](https://github.com/JuliaPy/CondaPkg.jl) to use a manual python installation and avoid updating.
