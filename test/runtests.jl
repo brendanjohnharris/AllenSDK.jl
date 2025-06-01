@@ -1,7 +1,9 @@
+ENV["JULIA_CONDAPKG_VERBOSITY"] = 2
 using AllenSDK
 using PythonCall
 using Test
 using Scratch
+
 
 @testset "AllenSDK.jl" begin
     # Load the test file
