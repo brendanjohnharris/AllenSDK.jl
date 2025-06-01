@@ -1,4 +1,3 @@
-ENV["JULIA_CONDAPKG_VERBOSITY"] = 2
 using AllenSDK
 using PythonCall
 using Test
