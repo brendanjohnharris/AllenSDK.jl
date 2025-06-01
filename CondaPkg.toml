@@ -13,6 +13,7 @@
 # argschema = ">=3.0.1"
 
 [deps]
+pandas = "==1.5.3"
 hdmf = ">3.6"
 python = ">=3.9,<=3.11"
 scipy = "<1.11"
