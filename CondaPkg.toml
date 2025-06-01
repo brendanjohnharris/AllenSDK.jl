@@ -1,22 +1,22 @@
 [deps]
 pandas = "==1.5.3"
 pynwb = "<3"
-hdmf = ">3.6"
+hdmf = ">3.6,<4"
 wheel = ""
 scipy = "<1.11"
 numpy = "<1.24"
 xarray = "<2023.2.0"
-python = ">=3.9"
+python = ">=3.9,<3.13"
 
-[pip.deps]
-allensdk = "==2.16.2"
-argschema = ">=3.0.1"
+# [pip.deps]
+# allensdk = "==2.16.2"
+# argschema = ">=3.0.1"
 
 # [deps]
 # hdmf = ">3.6"
 # python = ">=3.9,<=3.11"
 
-# [pip.deps]
-# ndx-events = "@https://github.com/rly/ndx-events/archive/refs/tags/0.2.0.zip"
-# argschema = "@https://github.com/AllenInstitute/argschema/archive/refs/tags/v3.0.1.zip"
-# allensdk = "@https://github.com/AllenInstitute/AllenSDK/archive/refs/tags/v2.16.2.zip"
+[pip.deps]
+ndx-events = "@https://github.com/rly/ndx-events/archive/refs/tags/0.2.0.zip"
+argschema = "@https://github.com/AllenInstitute/argschema/archive/refs/tags/v3.0.1.zip"
+allensdk = "@https://github.com/AllenInstitute/AllenSDK/archive/refs/tags/v2.16.2.zip"
