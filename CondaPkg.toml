@@ -9,6 +9,5 @@ xarray = "<2023.2.0"
 python = ">=3.9,<=3.11"
 
 [pip.deps]
-ndx-events = "@https://github.com/rly/ndx-events/archive/refs/tags/0.2.0.zip"
 allensdk = "==2.16.2"
-argschema = "@https://github.com/AllenInstitute/argschema/archive/refs/tags/v3.0.1.zip"
+argschema = ">=3.0.1"
