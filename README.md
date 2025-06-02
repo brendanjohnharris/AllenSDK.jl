@@ -21,4 +21,4 @@ If CondaPkg has trouble resolving the Python dependencies, you may need to manua
 ENV["JULIA_CONDAPKG_ENV"] = "/path/to/some/environment/"
 ENV["JULIA_CONDAPKG_OFFLINE"] = true
 ```
-These environment variables tell [CondaPkg.jl](https://github.com/JuliaPy/CondaPkg.jl) to use a manual python installation and avoid updating. You could also try the 'MicroMamba' backend for CondaPkg instead of 'Pixi'.
+These environment variables tell [CondaPkg.jl](https://github.com/JuliaPy/CondaPkg.jl) to use a manual python installation and avoid updating.
