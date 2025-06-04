@@ -3,6 +3,8 @@ pandas = "==1.5.3"
 scipy = "<1.11"
 numpy = "<1.24"
 xarray = "<2023.2.0"
+urllib3 = "<2" # Prevents appengine removal error
+setuptools = "<81" # Removes warning about pkg_resources deprecation
 python = ">=3.9,<3.13"
 
 [pip.deps]
