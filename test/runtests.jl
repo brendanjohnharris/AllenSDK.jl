@@ -3,6 +3,9 @@ using PythonCall
 using Test
 using Scratch
 
+@testset "HDF5 version" begin
+    @test string(AllenSDK.h5py.h5.get_libversion()) == "(1, 14, 6)"
+end
 
 @testset "AllenSDK.jl" begin
     # Load the test file

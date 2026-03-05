@@ -17,6 +17,7 @@ function __init__()
     PythonCall.pycopy!(ecephys, pyimport("allensdk.brain_observatory.ecephys"))
     PythonCall.pycopy!(ecephys_project_cache,
         pyimport("allensdk.brain_observatory.ecephys.ecephys_project_cache"))
+    PythonCall.pycopy!(h5py, pyimport("h5py"))
 end
 
 end
