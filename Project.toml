@@ -4,12 +4,14 @@ version = "0.4.0"
 authors = ["brendanjohnharris <brendanjohnharris@gmail.com> and contributors"]
 
 [deps]
+CondaPkg = "992eb4ea-22a4-4c89-a5bb-47a3300528ab"
 PythonCall = "6099a3de-0909-46bc-b1f4-468b9a2dfc0d"
 
 [weakdeps]
 HDF5_jll = "0234f1f7-429e-5d53-9886-15a909be8d59"
 
 [compat]
+CondaPkg = "0.2"
 HDF5_jll = "=1.14.6" # Required for compatibility with pinned hdf5 1.14.6 in CondaPkg.toml
 PythonCall = "0.9"
 julia = "1.10"
