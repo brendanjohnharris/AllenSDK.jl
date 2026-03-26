@@ -12,11 +12,10 @@ const ecephys_project_cache = PythonCall.pynew()
 const h5py = PythonCall.pynew()
 
 function __init__()
-    # On Windows, add the conda env's Library/bin to PATH so h5py can find the HDF5 DLLs
     if Sys.iswindows()
         libbin = joinpath(CondaPkg.envdir(), "Library", "bin")
         if isdir(libbin)
-            ENV["PATH"] = libbin * ";" * get(ENV, "PATH", "")
+            pyimport("os").add_dll_directory(libbin)
         end
     end
     PythonCall.pycopy!(pynwb, pyimport("pynwb"))
