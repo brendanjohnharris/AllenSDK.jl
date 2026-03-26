@@ -1,6 +1,5 @@
 module AllenSDK
 using PythonCall
-import CondaPkg
 
 export pynwb, allensdk, behavior_ecephys_session, ecephys
 
@@ -12,12 +11,6 @@ const ecephys_project_cache = PythonCall.pynew()
 const h5py = PythonCall.pynew()
 
 function __init__()
-    if Sys.iswindows()
-        libbin = joinpath(CondaPkg.envdir(), "Library", "bin")
-        if isdir(libbin)
-            pyimport("os").add_dll_directory(libbin)
-        end
-    end
     PythonCall.pycopy!(pynwb, pyimport("pynwb"))
     PythonCall.pycopy!(allensdk, pyimport("allensdk"))
     PythonCall.pycopy!(behavior_ecephys_session, pyimport("allensdk.brain_observatory.ecephys.behavior_ecephys_session"))
