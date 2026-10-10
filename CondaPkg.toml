@@ -13,4 +13,5 @@ python = ">=3.9,<3.13"
 pynwb = "<3"
 hdmf = ">3.8,<4"
 allensdk = "==2.16.2"
+statsmodels = "<0.15" # 0.15.0 removed sandbox.stats.multicomp.multipletests, which allensdk 2.16.2 imports
 argschema = ">=3.0.1"
