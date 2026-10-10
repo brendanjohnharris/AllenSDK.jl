@@ -1,10 +1,16 @@
 using AllenSDK
+import HDF5 # after AllenSDK on purpose: this order breaks HDF5_jll if h5py shares its libhdf5
 using PythonCall
 using Test
 using Scratch
 
-@testset "HDF5 version" begin
-    @test string(AllenSDK.h5py.h5.get_libversion()) == "(1, 14, 6)"
+@testset "h5py and HDF5.jl keep separate libhdf5" begin
+    # A shared libhdf5 also refuses to reopen a file h5py holds open.
+    path = tempname() * ".h5"
+    HDF5.h5write(path, "x", [1, 2, 3])
+    pyfile = AllenSDK.h5py.File(path, "r")
+    @test HDF5.h5read(path, "x") == [1, 2, 3]
+    pyfile.close()
 end
 
 @testset "AllenSDK.jl" begin
